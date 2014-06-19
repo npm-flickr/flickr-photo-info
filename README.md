@@ -47,6 +47,9 @@ photo('14321741011', function (error, p) {
 
   p.url
   // => "https:\/\/www.flickr.com\/photos\/azer\/14321741011\/"
+  
+  p.urls.original
+  // => https:\/\/farm3.staticflickr.com\/2922\/14321741011_0ddc14584b_o.jpg
 
   p.format
   // => "jpg
