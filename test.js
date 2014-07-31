@@ -7,7 +7,7 @@ var photo = require("./")({
 
 test('basic info', function (t) {
   photo('14321741011', function (error, craterlake) {
-    t.plan(12);
+    t.plan(11);
     t.error(error);
 
     t.equal(craterlake.id, '14321741011');
@@ -28,7 +28,6 @@ test('basic info', function (t) {
     t.equal(craterlake.description, '');
     t.equal(craterlake.postTS, 1401670228000);
     t.equal(craterlake.takenTS, 1400987281000);
-    t.equal(craterlake.updateTS, 1401697494000);
     t.equal(craterlake.url, "https:\/\/www.flickr.com\/photos\/azer\/14321741011\/");
     t.equal(craterlake.format, "jpg");
     t.ok(craterlake.views > 50);
@@ -49,5 +48,14 @@ test('urls', function (t) {
     t.deepEqual(craterlake.urls.medium800, "https:\/\/farm3.staticflickr.com\/2922\/14321741011_aeb3b41d62_c.jpg");
     t.deepEqual(craterlake.urls.large, "https:\/\/farm3.staticflickr.com\/2922\/14321741011_aeb3b41d62_b.jpg");
     t.deepEqual(craterlake.urls.original, "https:\/\/farm3.staticflickr.com\/2922\/14321741011_0ddc14584b_o.jpg");
+  });
+});
+
+test('png format', function (t) {
+  photo('14605009770', function (error, twister) {
+    t.plan(3);
+    t.error(error);
+    t.equal(twister.id, '14605009770');
+    t.equal(twister.format, "png");
   });
 });

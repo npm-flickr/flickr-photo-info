@@ -42,7 +42,7 @@ function photo (id, callback) {
         server: info.server,
         secret: info.secret,
         osecret: info.originalsecret,
-        format: "jpg"
+        format: info.originalformat
       })
     });
   });
