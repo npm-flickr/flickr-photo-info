@@ -50,3 +50,12 @@ test('urls', function (t) {
     t.deepEqual(craterlake.urls.original, "https:\/\/farm3.staticflickr.com\/2922\/14321741011_0ddc14584b_o.jpg");
   });
 });
+
+test('png format', function (t) {
+  photo('14605009770', function (error, twister) {
+    t.plan(3);
+    t.error(error);
+    t.equal(twister.id, '14605009770');
+    t.equal(twister.format, "png");
+  });
+});
