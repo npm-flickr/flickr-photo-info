@@ -7,7 +7,7 @@ var photo = require("./")({
 
 test('basic info', function (t) {
   photo('14321741011', function (error, craterlake) {
-    t.plan(12);
+    t.plan(11);
     t.error(error);
 
     t.equal(craterlake.id, '14321741011');
@@ -28,7 +28,6 @@ test('basic info', function (t) {
     t.equal(craterlake.description, '');
     t.equal(craterlake.postTS, 1401670228000);
     t.equal(craterlake.takenTS, 1400987281000);
-    t.equal(craterlake.updateTS, 1401697494000);
     t.equal(craterlake.url, "https:\/\/www.flickr.com\/photos\/azer\/14321741011\/");
     t.equal(craterlake.format, "jpg");
     t.ok(craterlake.views > 50);
