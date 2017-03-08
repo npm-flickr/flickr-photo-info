@@ -28,7 +28,7 @@ function photo (id, callback) {
       views: Number(info.views),
       owner: {
         id: info.owner.nsid,
-        username: info.owner.path_alias,
+        username: info.owner.username || info.owner.path_alias,
         name: info.owner.realname,
         url: "https://flickr.com/photos/" + info.owner.path_alias,
         icons: {
