@@ -1,0 +1,28 @@
+{
+  "name": "flickr-photo-info",
+  "version": "0.0.1",
+  "description": "Get info of a photo on Flickr",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "flickr",
+    "photography",
+    "api"
+  ],
+  "repository": {
+    "url": "git@github.com:npm-flickr/flickr-photo-info.git",
+    "type": "git"
+  },
+  "author": "azer",
+  "license": "BSD",
+  "dependencies": {
+    "flickr-client": "0.0.3",
+    "flickr-generate-urls": "0.0.0"
+  },
+  "devDependencies": {
+    "with-env": "azer/with-env",
+    "prova": "azer/prova"
+  }
+}
